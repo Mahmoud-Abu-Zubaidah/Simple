@@ -1,0 +1,210 @@
+:root{
+    --backgrond:hsl(233, 47%, 7%);
+    --card-background:hsl(244, 38%, 16%);
+    --main-color:hsl(277, 64%, 61%);
+    --filter: hsl(277deg 100% 24% / 54%);
+    --head:hsla(0, 0%, 100%, 0.6);
+    --tall:hsla(0, 0%, 100%, 0.75);
+    --Primare-font: 'Inter', sans-serif;
+    --second-font:'Lexend Deca', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+.centering{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: var(--backgrond);
+}
+.col-content{
+    border-radius:10px;
+    position: relative;
+    /* width:65%; Editing in resposive screen
+    height: 50%; */
+    display: flex;
+    background: var(--card-background);
+}
+.info{
+    /* width:55%; responsive screen */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.col-info{
+    font-family: var(--Primare-font);
+    font-weight: 700;
+    /*responsive
+    width:75%;
+    height:75%;
+    */
+    color: hsla(0, 0%, 100%, 0.75);
+}
+.col-info > p{
+    margin-top: 30px;
+    opacity: 0.6;
+}
+label[for="color"]{
+    color:var(--main-color);
+}
+
+.col-prize{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+.prize-detail{
+    width: 25%;
+}
+/*On responcive
+img{
+    border-radius:0 10px 10px 0;
+    width: 45%;
+} */
+p{
+    font-family: var(--second-font);
+    font-weight: 400;
+    font-size: 15px;
+}
+.prize-detail p {
+    padding-top: 5px;
+    text-transform: uppercase;
+    opacity: 0.6;
+}
+
+.col-content::after{
+    border-radius:0 10px 10px 0;
+    position:absolute;
+    top:0;
+    right:0;
+    content: "";
+    background:var(--filter) ;
+}
+.attribution{
+    display: flex;
+
+    align-items: center;
+    color: white;
+    font-size: 15px;
+    font-family: var(--Primare-font);
+    font-weight: 700;
+    border-radius: 0 0 10px 10px ;
+    text-align: center;
+} 
+/* Extra small devices (phones, 600px and down) */
+@media  (max-width:600px) {
+    .attribution{
+        width:70%;
+        height:50px ;
+
+        background:var(--card-background) ;
+    }
+    .col-content::after{
+        border-radius: 10px 10px 0 0;
+        width:100%;
+        height: 300px;
+    }
+    .centering{
+        height:calc(150vh + 50px);
+    }
+    .col-content{
+        border-radius:10px 10px 0 0;
+        flex-direction: column;
+        width:70%;
+
+        margin-top: 50px;
+        text-align: center;
+    }
+    .title{
+        margin-top: 20px;
+    }
+    img{
+        border-radius: 10px 10px 0 0;
+        width: 100%;
+        height: 300px;
+        order:1;
+    }
+    .info{
+        height:calc(150vh - 375px );
+        order: 2;
+    }
+    .col-info{
+        height: 100%;
+    }
+    .col-prize{
+        height: 40%;
+        flex-direction: column;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media  (min-width: 601px) {
+    
+.attribution{
+    background:linear-gradient(to right , var(--card-background) 0%,var(--card-background) 50% ,var(--filter) 50% ,var(--filter) 100%);
+    justify-content: center;
+    width:50%;
+    height:50px ;
+    border-radius: 0 0 10px 10px ;
+}
+    .col-content::after{
+        border-radius:0 10px 10px 0;
+        width:50%;
+        height:100%;
+    }
+    .centering{
+        height: 100vh;
+    }
+    .col-content{
+        width:80%;
+        height:400px;
+        text-align: center;
+    }
+    .title{
+        margin-top: 50px;
+    }
+    img{
+        border-radius:0 10px 10px 0;
+        width: 50%;
+        height:100%;
+    }
+    .info{
+        height:100%;
+        width: 50%;
+    }
+    .col-info{
+        height: 100%;
+    }
+    .col-prize{
+        max-height:50px;
+        min-height: 20px;
+        justify-content: space-around;
+    }
+    .prize-detail{
+        max-width: 20%; 
+        min-width: 5%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media  (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media  (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
