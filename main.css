@@ -34,6 +34,7 @@
 }
 .info{
     /* width:55%; responsive screen */
+    margin: 25px;
     display: flex; 
     justify-content: center;
     align-items: center;
@@ -113,15 +114,15 @@ p{
         height: 300px;
     }
     .centering{
-        height:calc(150vh + 50px);
+        height:calc(150vh + 100px);
     }
     .col-content{
         border-radius:10px 10px 0 0;
         flex-direction: column;
         width:70%;
-
         margin-top: 50px;
         text-align: center;
+        min-height: 150vh;
     }
     .title{
         margin-top: 20px;
@@ -172,7 +173,6 @@ p{
         height:100%;
     }
     .info{
-        margin: 25px;
         height:100%;
         width:calc(50% - 50px);
     }
